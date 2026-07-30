@@ -294,10 +294,58 @@ picture = [
     [0,0,0,1,0,0,0]
 ]
 
+fill = '*'
+empty = ''
 for row in picture:
     for pixel in row:
-        if (pixel == 1):
-            print('*', end='')
+        if (pixel):
+            print(fill, end='')
         else:
-            print(' ', end='')
-    print('')
+            print(empty, end='')
+    print('') # need a new line after every row
+
+# what is good code?
+# clean
+# readability
+# predictability
+# DRY
+
+# Exercise: Check for duplicates in list:
+some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+
+duplicates = []
+for value in some_list:
+    if some_list.count(value) > 1:
+        if value not in duplicates:
+            duplicates.append(value)
+
+print(duplicates)
+
+# functions
+# DRY
+def say_hello():
+    print('hello')
+
+say_hello()
+
+def show_tree():
+    for image in picture:
+        for pixel in image:
+            if (pixel):
+                print('*',end='')
+            else:
+                print(' ',end='')
+        print('')
+
+show_tree()
+show_tree()
+show_tree()
+
+#parameters
+def say_hello(name, emoji):
+    print(f'hello {name} {emoji}')
+
+#arguments
+say_hello('tilou', '☺️') #call, invoke
+say_hello('daniel', '☺️')
+say_hello('emilie', '☺️')
