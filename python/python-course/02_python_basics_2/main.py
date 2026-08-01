@@ -494,3 +494,25 @@ def super_func(name, *args, i='hi', **kwargs):
 print(super_func('tilou', 1,2,3,4,5, num1=5, num2=10))
 
 #Rule: params, *args, default parameters, **kwargs
+
+def calculate_order(customer_name, *args, discount=15, **kwargs):
+    discount_price = int(((sum(args) * discount) / 100))
+    total = 0
+    for item in kwargs.values():
+        total += item
+    
+    return sum(args) - discount_price + total
+
+print(calculate_order('tilou', 10,20,30, item1=12,item2=15))
+
+# exercise functions
+
+def highest_even(li):
+    evens = []
+    for item in li:
+        if item % 2 == 0:
+            evens.append(item)
+
+    return max(evens)
+
+print(highest_even([2,10,2,3,4,8,11]))
