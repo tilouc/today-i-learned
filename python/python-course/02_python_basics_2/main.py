@@ -417,3 +417,80 @@ def checkDriveAge(age=0):
         return "Congratulations on your first year of driving. Enjoy the ride!"
 
 print(checkDriveAge(20))
+
+# methods vs functions
+# list()
+# print()
+# max()
+# min()
+# input()
+
+def some_random_stuff():
+    pass
+
+some_random_stuff() # a function
+
+method = 'hello'.capitalize() # a method
+print(method)
+
+# print vs print + return + return
+
+def test(a):
+    print(a)
+
+def test2(a):
+    print(a)
+    return a
+
+def test3(a):
+    return a
+
+x = test(10)
+y = test2(10)
+z = test3(10)
+
+print("x =", x)
+print("y =", y)
+print("z =", z)
+
+#docstrings
+
+def test(a):
+    '''
+    info: this function tests and prints param a
+    '''
+    print(a)
+
+test('!!!!')
+# test()
+help(test)
+print(test.__doc__)
+# len()
+
+# clean code
+def is_even(num):
+    return num % 2 == 0
+    # if num % 2 == 0:
+        # return True
+    # return False
+    # else:
+        # return False
+
+print(is_even(50))
+print(is_even(51))
+
+# args and kwargs
+# *args **kwargs
+
+def super_func(name, *args, i='hi', **kwargs):
+    # print(*args)
+    # print(args)
+    # print(kwargs)
+    total = 0
+    for items in kwargs.values():
+        total += items
+    return sum(args) + total
+
+print(super_func('tilou', 1,2,3,4,5, num1=5, num2=10))
+
+#Rule: params, *args, default parameters, **kwargs
