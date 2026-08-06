@@ -32,6 +32,6 @@
 
 - press the tab key: brings up your most recent command or complete what you are about to write.
 
-- `rm <filename>.<filetype>` or `del <filename>.<filetype>` (windows): delete the file <filename>.<filetype>.
+- `rm <filename>.<filetype>` or `del <filename>.<filetype>` (windows): delete the file `<filename>.<filetype>`.
 
-- `cd ..` --> `rm -r <foldername>` or `deltree <foldername>` (windows): delete the folder <foldername>.
+- `cd ..` --> `rm -r <foldername>` or `deltree <foldername>` (windows): delete the folder `<foldername>`.
