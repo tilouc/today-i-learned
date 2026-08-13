@@ -1,37 +1,39 @@
 - `ls` (list) or `dir` (directory): lists everything that is in my current directory.
 
-- `pwd` (print working directory): to see your current working directory.
+- `pwd` (print working directory): shows my current working directory.
 
-- `cd` (change directory): to change your directory.
+- `cd` (change directory): changes my current directory.
 
-- `cd ..` : brings you back to one directory.
+- `cd ..`: moves me up one directory (to the parent directory).
 
-- `cd <name>` + `tab`: opposite of `cd ..`.
+- `cd <name>` + `tab`: tab completion.
 
-- `clear` or `cls`: to clear your terminal.
+- `clear` or `cls`: clears my terminal.
 
-- `cd /`: takes you to the route directory.
+- `cd /`: takes me to the root directory.
 
-- `cd ~`: takes you to the user directory.
+- `cd ~`: takes me to the home directory.
 
-- `cd <name>/<name1>/...`: moves you to the specified directory path.
+- `cd <name>/<name1>/...`: moves me to the specified directory path.
 
-- `open .`: opens the folder that we're currently in.
+- `open .` (mac and linux) or `start .` (powershell) or `ii .` (powershell): opens the folder that i'm currently in.
 
-- `mkdir <name>` (make directory or make a folder): creates a folder in the directory we're currently in.
+- `mkdir <name>` (make directory): creates a folder in the directory that i'm currently in.
 
-- `touch <filename>.<filetype>` or `echo > <filename>.<filetype>`: creates a new file in the folder we're currently in.
+- `touch <filename>.<filetype>` (unix) or `echo > <filename>.<filetype>` (windows): creates a new file in the folder that i'm currently in.
 
-- `open <filename>.<filetype>` (mac and linux) `start <filename>.<filetype>`: opens the file of the folder we're currently in.
+- `open <filename>.<filetype>` (mac and linux) or `start <filename>.<filetype>` (windows): opens the file in the current folder.
 
-- `open -a "App Name"` (mac and linux): opens the application you want by specifying the exact name.
+- `open -a "App Name"` (mac and linux): opens the specified application.
 
-- `mv <filename>.<filetype>` (mac and linux) `rename <filename1>.<filetype>`: rename the file `<filename>.<filetype>` to `<filename1>.<filetype>`.
+- `mv <filename>.<filetype> <filename1>.<filetype>` (unix / powershell): renames or moves the file.
 
-- press the up arrow: goes through your entire history.
+- `rename <filename>.<filetype> <filename1>.<filetype>` or `ren <filename>.<filetype> <filename1>.<filetype>` (windows): renames the file.
 
-- press the tab key: brings up your most recent command or complete what you are about to write.
+- press the up arrow: goes through previous commands in your history.
 
-- `rm <filename>.<filetype>` or `del <filename>.<filetype>` (windows): delete the file `<filename>.<filetype>`.
+- press the tab key: completes what you are writing.
 
-- `cd ..` --> `rm -r <foldername>` or `deltree <foldername>` (windows): delete the folder `<foldername>`.
+- `rm <filename>.<filetype>` (powershell) or `del <filename>.<filetype>` (windows): deletes the specified file.
+
+- `rm -r <foldername>` (powershell) or `rmdir <foldername>` / `rd <foldername>` (windows): deletes the specified folder and its contents.
