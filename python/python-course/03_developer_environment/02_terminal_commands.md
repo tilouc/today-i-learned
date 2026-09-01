@@ -1,6 +1,6 @@
 - `ls` (list) or `dir` (directory): lists everything that is in my current directory.
 
-- `pwd` (print working directory): shows my current working directory.
+- `pwd` (present or print working directory): shows my current working directory.
 
 - `cd` (change directory): changes my current directory.
 
