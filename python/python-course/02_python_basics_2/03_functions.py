@@ -5,7 +5,7 @@ def say_hello():
 
 say_hello()
 
-def show_tree():
+def show_tree(picture):
     for image in picture:
         for pixel in image:
             if (pixel):
@@ -14,9 +14,30 @@ def show_tree():
                 print(' ',end='')
         print('')
 
-show_tree()
-show_tree()
-show_tree()
+show_tree([
+    [0,0,0,1,0,0,0],
+    [0,0,1,1,1,0,0],
+    [0,1,1,1,1,1,0],
+    [1,1,1,1,1,1,1],
+    [0,0,0,1,0,0,0],
+    [0,0,0,1,0,0,0]
+])
+show_tree([
+    [0,0,0,1,0,0,0],
+    [0,0,1,1,1,0,0],
+    [0,1,1,1,1,1,0],
+    [1,1,1,1,1,1,1],
+    [0,0,0,1,0,0,0],
+    [0,0,0,1,0,0,0]
+])
+show_tree([
+    [0,0,0,1,0,0,0],
+    [0,0,1,1,1,0,0],
+    [0,1,1,1,1,1,0],
+    [1,1,1,1,1,1,1],
+    [0,0,0,1,0,0,0],
+    [0,0,0,1,0,0,0]
+])
 
 #parameters
 def say_hello(name, emoji):
