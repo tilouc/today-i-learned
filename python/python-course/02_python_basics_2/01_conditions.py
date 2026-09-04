@@ -6,10 +6,13 @@ else:
     print("false")
 # is_old = True
 is_old = bool('hello')
+print(is_old)
 # is_old = False
 # is_licenced = True
 is_licenced = bool(5)
+print(is_licenced)
 # is_licenced = False
+
 
 #truthy and falsy
 print(bool('hello'))
@@ -28,11 +31,13 @@ else:
 
 print('ok ok ok')
 
+
 password = '123'
 username = 'johnny'
 
 if password and username:
     print('welcome!')
+
 
 # ternary operator
 
@@ -42,6 +47,7 @@ is_friend = True
 can_message = "message allowed" if is_friend else "not allowed to message"
 
 print(can_message)
+
 
 # short circuiting
 is_friend = True
