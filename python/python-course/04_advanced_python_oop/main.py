@@ -1,6 +1,12 @@
 #OOP
 #class
 
+# 4 pillars of oop: 
+# encapsulation
+# abstraction
+# inheritance
+# polymorphism
+
 class BigObject: #Class or Blueprint
     #code
     pass
@@ -264,9 +270,3 @@ for char in [wizard1, archer1]:
     char.attack()
 
 print(wizard1.attack())
-
-# 4 pillars of oop: 
-# encapsulation
-# abstraction
-# inheritance
-# polymorphism
