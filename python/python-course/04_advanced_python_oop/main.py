@@ -319,3 +319,156 @@ my_pets = Pets(my_cats)
 #4 Output all of the cats walking using the my_pets instance
 
 print(my_pets.walk())
+
+
+# super
+class User(object):
+    def __init__(self, email):
+        self.email = email
+
+    def sign_in(self):
+        print('logged in')
+
+
+class Wizard(User):
+    def __init__(self, name, power, email):
+        # User.__init__(self, email)
+        super().__init__(email)
+        self.name = name
+        self.power = power
+
+    def attack(self):
+        print(f'attacking with power of {self.power}')
+
+wizard1 = Wizard('Merlin', 60, 'merlin@gmail.com')
+print(wizard1.email)
+print(wizard1.sign_in())
+
+# introspection
+# print(dir(wizard1.))
+print(dir(wizard1))
+
+
+class Toy():
+    def __init__(self, color, age):
+        self.color = color
+        self.age = age
+        self.my_dict = {
+            'name': 'Yoyo',
+            'has_pets': False
+        }
+
+    def __str__(self):
+        return f'{self.color}'
+
+    def __len__(self):
+        return 5
+
+    def __del__(self):
+        print('deleted!')
+
+    def __call__(self):
+        return('yess??')
+
+    def __getitem__(self, i):
+        return self.my_dict[i]
+
+action_figure = Toy('red', 0)
+print(action_figure.__str__())
+print(str(action_figure))
+
+print(len(action_figure))
+print(action_figure.__len__())
+# del action_figure
+print(action_figure())
+print(action_figure['name'])
+
+# exercise extending list
+class SuperList(list):
+    def __len__(self):
+        return 1000
+
+super_list1 = SuperList()
+
+print(len(super_list1))
+super_list1.append(5)
+print(super_list1[0])
+print(issubclass(SuperList, list))
+print(issubclass(list, object))
+
+
+# multiple inheritance
+
+class User():
+    def sign_in(self):
+        print('logged in')
+
+class Wizard(User):
+    def __init__(self, name, power):
+        self.name = name
+        self.power = power
+
+    def attack(self):
+        print(f'attacking with power of {self.power}')
+
+class Archer(User):
+    def __init__(self, name, arrows):
+        self.name = name
+        self.arrows = arrows
+
+    def check_arrows(self):
+        print(f'{self.arrows} remaining')
+
+    def run(self):
+        print('ran really fast')
+
+class HybridBorg(Wizard, Archer):
+    def __init__(self, name, power, arrows):
+        Archer.__init__(self, name, arrows)
+        Wizard.__init__(self, name, power)
+
+hb1 = HybridBorg('borgie', 50, 100)
+print(hb1.run())
+print(hb1.check_arrows())
+print(hb1.attack())
+print(hb1.sign_in())
+
+
+#MRO - Method Resolution Order
+"""
+      A
+    /   \
+  /       \
+B           C
+  \       /
+    \   /
+      D
+"""
+
+class A:
+    # num = 10
+    pass
+
+class B(A):
+    pass
+
+class C(A):
+    # num = 1
+    pass
+
+class D(B, C):
+    pass
+
+print(D.num)
+print(D.mro())
+D.__str__
+
+
+class X: pass
+class Y: pass
+class Z: pass
+class A(X,Y): pass
+class B(Y,Z): pass
+class M(B,A,Z): pass
+
+print(M.__mro__)
